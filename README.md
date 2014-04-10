@@ -38,6 +38,10 @@ When you have put the files and folder in the right place, open the ```style-gui
 
 This is a little trickier, since there are a lot of variables. Set up is mainly done in ```style-guide/colour-config.less```
 
+This file tells the Style Guide where to find your colours file (check the path).
+
+You may also need to alter ```style-guide/kit-snippets/colours.kit``` depending on how many brand colours you have. Currently, the project is set up to accept two brand colours, but templates for extending this are covered.
+
 ## Top Menu
 
 The Top Menu will be built automatically from the ````<h2 class="sg-element">````
