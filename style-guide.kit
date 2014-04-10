@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="no-js iex lt-ie9 ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js iex lt-ie9 ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js iex ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js sg-html"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- DO NOT CHANGE THIS IMPORT: DO CHANGE YOUR PROJECT DETAILS IN config.kit -->
+		<!-- @import "style-guide/config" -->
+        <title><!--$projectName--> Style Guide</title>
+        <meta name="description" content="">
+        <!-- Set the meta for iOS Home Screen settings -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- Set the meta for smartphones to resize properly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <!-- XRayHTML styles -->
+        <link href="style-guide/dist/X-rayHTML.css" rel="stylesheet">
+        <link href="style-guide/libs/prism.css" rel="stylesheet">
+        <!-- The Style Guide styles -->
+        <link href="style-guide/css/sg-styles.css" rel="stylesheet">
+		<!-- Set the framework styles -->
+        <link rel="stylesheet" href="<!--$projectCSSPath-->">
+        <!-- Import modernizr here to set the browser capabilities -->
+        <script src="/js/lib/modernizr-dev.min.js"></script>
+        <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+    </head>
+    
+    <body class="sg-body">
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<!-- DO NOT CHANGE THIS IMPORT -->
+		<!-- @import "style-guide/kit-snippets/topnav" -->
+		
+		<!-- METHOD ==
+			Wrap snippets in <div data-xrayhtml="flip" class="prism zeroclip"></div> and avoid white-space
+		-->
+		
+		<!-- Begin #style-guide -->
+		<div id="style-guide">
+		
+			<h1 class="sg-element"><!--$projectName--> Style Guide</h1>
+			<p class="sg-element"><!--$projectDescription--></p>
+			<p class="sg-element"><!--$sgHowTo--></p>
+			
+			<!-- Credits (show/hide toggle) -->
+			<div class="credits sg-element">
+				<button type="button">Credits</button>
+				<div class="details">
+					<h3>Credits</h3>
+					<!-- @import "style-guide/kit-snippets/credits" -->
+				</div>
+			</div>
+			<!-- End credits -->
+			
+<!-- Back indent all elements to avoid unnecessary whitespace in the code display -->
+<!-- @import "style-guide/kit-snippets/colours" -->
+
+<!-- @import "style-guide/kit-snippets/headings" -->
+
+<!-- @import "style-guide/kit-snippets/text-blocks" -->
+
+<!-- @import "style-guide/kit-snippets/lists" -->
+
+<!-- @import "style-guide/kit-snippets/text-inline" -->
+        	
+		</div>
+		<!-- End #style-guide -->
+
+        <!-- Begin JS calls -->
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.min.js"><\/script>')</script -->
+        <script src="/js/lib/jquery-1.11.0.min.js"></script>
+        <!-- script src="libs/jquery/jquery.js"></script -->
+		<script src="style-guide/src/sg.js"></script>
+		<script src="style-guide/src/X-rayHTML.js"></script>
+	
+		<!-- Demo Extras! -->
+		<script src="style-guide/libs/prism.min.js"></script>
+		<script src="style-guide/libs/ZeroClipboard.min.js"></script>
+	
+		<script>
+			$( window ).bind( "create.xrayhtml", function( e ) {
+				var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" ),
+					zeroclip = !!~e.target.getAttribute( "class" ).indexOf( "zeroclip" ),
+					flash = !!( navigator.mimeTypes[ "application/x-shockwave-flash" ] || "ActiveXObject" in window );
+	
+				if( prism && "Prism" in window ) {
+					$( ".prism" ).find( "code" ).addClass( "language-markup" );
+					Prism.highlightAll();
+				}
+	
+				if( zeroclip && "ZeroClipboard" in window && flash ) {
+					$( e.target ).each(function() {
+						var copy = $( "<a/>", {
+								"class" : "btn btn-copy",
+								"href" : "#",
+								"text" : "Copy to Clipboard"
+							}),
+							code = $( this ).find( "code" ).text(),
+							clip = new ZeroClipboard( copy, { 
+								moviePath: "/style-guide/libs/ZeroClipboard.swf",
+								text: code
+							});
+	
+						$( this ).find( ".source-panel" ).prepend( copy );
+					});
+				}
+			});
+			// Smooth scrolling (with 40px top menu offset) -->
+			$(function() {
+				$('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length) {
+							$('html,body').animate({
+								scrollTop: (($(target).offset().top) - 40)
+								}, 1000);
+							return false;
+						}
+					}
+				});
+			});
+			// Build an index of h2 IDs
+			$("h2.sg-element").each(function(i) {
+		    var current = $(this);
+		    current.attr("id", "title" + i);
+		    $("#toc").append("<a id='link" + i + "' href='#title" +
+		        i + "' title='" + current.attr("tagName") + "'>" + 
+		        current.html() + "</a>");
+			});
+		</script>
+    </body>
+</html>

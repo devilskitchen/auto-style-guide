@@ -1,0 +1,190 @@
+// Import the colours LESS file: WATCH OUT FOR VARIABLE CLASHES!
+@import "../less/02-global-variables/02-02-colours";
+
+// Variables
+@swatch-size:64px;
+
+@color1-value:red(@color1);
+
+// Unfortunately, you have to set these up. Bit manual -- sorry!
+
+
+
+// span
+.color-swatches {
+	span {
+		display:inline-block;
+		width:@swatch-size;
+		height:@swatch-size;
+		margin:0.4em;
+	}
+	&.brand {
+		span {
+			&:nth-child(1) {
+				background:@color1;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(2) {
+				background:@color2;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			/*&:nth-child(3) {
+				background:@color3;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(4) {
+				background:@color4;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(5) {
+				background:@color5;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(6) {
+				background:@color6;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(7) {
+				background:@color7;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(8) {
+				background:@color8;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(9) {
+				background:@color9;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+			/*&:nth-child(10) {
+				background:@color10;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+		}
+	}
+	&.grey {
+		span {
+			&:nth-child(1) {
+				background:@lightest-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(2) {
+				background:@lighter-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(3) {
+				background:@light-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(4) {
+				background:@grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(5) {
+				background:@dark-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(6) {
+				background:@darker-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(7) {
+				background:@darkest-grey;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			/*&:nth-child(8) {
+				background:@grey8;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(9) {
+				background:@grey9;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}
+			&:nth-child(10) {
+				background:@grey10;
+				border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+			}*/
+		}
+	}
+}
+
+// Output swatches for lighten and darken colour functions for each brand colour
+.brand {
+	//.brand-swatches(3);
+}
+
+.brand1-function {
+	@swatch-col:@color1;
+	.col-function-swatches(10);
+}
+
+.brand2-function {
+	@swatch-col:@color2;
+	.col-function-swatches(10);
+}
+
+// Brand swatches
+/*.brand-swatches(@n, @i:1) when (@i =< @n) {
+	span {
+		&:nth-child(@{i}) {
+        	background:@color@{i};
+        	border:2px solid white;
+			box-shadow:0 0 3px rgba(0,0,0,0.7);
+        }
+	}
+	.brand-swatches(@n,(@i+1));
+}*/
+// End the color loop
+
+
+
+// Use a looping mixin to give increments for various colour functions
+@color-function-increment:10%;
+
+// Lighten loop
+.col-function-swatches(@n, @i:1) when (@i =< @n) {
+	&.brand-ltn {
+		span {
+			&:nth-child(@{i}) {
+	        	background:lighten(@swatch-col,(@i * @color-function-increment));
+	        	border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+	        }
+		}
+	}
+	&.brand-dkn {
+		span {
+			&:nth-child(@{i}) {
+	        	background:darken(@swatch-col,(@i * @color-function-increment));
+	        	border:2px solid white;
+				box-shadow:0 0 3px rgba(0,0,0,0.7);
+	        }
+		}
+	}
+	.col-function-swatches(@n,(@i+1));
+}
+// End the color loop
+
+
+
+
