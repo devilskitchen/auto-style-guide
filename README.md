@@ -48,13 +48,13 @@ You may also need to alter ```style-guide/kit-snippets/colours.kit``` depending 
 
 ### Top Menu
 
-The Top Menu will be built automatically from the ````<h2 class="sg-element">````
+The Top Menu will be built automatically from the ```<h2 class="sg-element">```
 
 ### HTML Mark-up
 
 Wrap your elements in this:
 
-Wrap snippets in ```<div data-xrayhtml="flip" class="prism zeroclip"><p>Code here</p></div>````
+Wrap snippets in ```<div data-xrayhtml="flip" class="prism zeroclip"><p>Code here</p></div>```
 
 ## This ain't done yet
 
