@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- DO NOT CHANGE THIS IMPORT: DO CHANGE YOUR PROJECT DETAILS IN config.kit -->
-		<!-- @import "style-guide/config" -->
+		<!-- @import "config" -->
         <title><!--$projectName--> Style Guide</title>
         <meta name="description" content="">
         <!-- Set the meta for iOS Home Screen settings -->
@@ -18,14 +18,14 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <!-- XRayHTML styles -->
-        <link href="style-guide/dist/X-rayHTML.css" rel="stylesheet">
-        <link href="style-guide/libs/prism.css" rel="stylesheet">
+        <link href="libs/x-ray-html/X-rayHTML.css" rel="stylesheet">
+        <link href="libs/prism/prism.css" rel="stylesheet">
         <!-- The Style Guide styles -->
-        <link href="style-guide/css/sg-styles.css" rel="stylesheet">
+        <link href="css/sg-styles.css" rel="stylesheet">
 		<!-- Set the framework styles -->
         <link rel="stylesheet" href="<!--$projectCSSPath-->">
         <!-- Import modernizr here to set the browser capabilities -->
-        <script src="/js/lib/modernizr-dev.min.js"></script>
+        <script src="libs/modernizr-dev.min.js"></script>
         <!--[if lt IE 9]>
 	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	    <![endif]-->
@@ -37,54 +37,68 @@
         <![endif]-->
 		
 		<!-- DO NOT CHANGE THIS IMPORT -->
-		<!-- @import "style-guide/kit-snippets/topnav" -->
+		<!-- @import "kit-snippets/topnav" -->
 		
 		<!-- METHOD ==
 			Wrap snippets in <div data-xrayhtml="flip" class="prism zeroclip"></div> and avoid white-space
 		-->
 		
-		<!-- Begin #style-guide -->
-		<div id="style-guide">
+		<!-- To avoid clashes with Front-end Editing, a lot of Sandbox LESS is wrapped in #container. As such, this element needs to be added here -->
+		<div id="container">
 		
-			<h1 class="sg-element"><!--$projectName--> Style Guide</h1>
-			<p class="sg-element"><!--$projectDescription--></p>
-			<p class="sg-element"><!--$sgHowTo--></p>
+			<!-- Begin #style-guide -->
+			<div id="style-guide">
 			
-			<!-- Credits (show/hide toggle) -->
-			<div class="credits sg-element">
-				<button type="button">Credits</button>
-				<div class="details">
-					<h3>Credits</h3>
-					<!-- @import "style-guide/kit-snippets/credits" -->
+				<h1 id="titletop" class="sg-element"><!--$projectName--> Style Guide</h1>
+				<p class="sg-element"><!--$projectDescription--></p>
+				<p class="sg-element"><!--$sgHowTo--></p>
+				
+				<!-- Credits (show/hide toggle) -->
+				<div class="credits sg-element">
+					<button type="button">Credits</button>
+					<div class="details">
+						<h3>Credits</h3>
+						<!-- @import "kit-snippets/credits" -->
+					</div>
 				</div>
-			</div>
-			<!-- End credits -->
+				<!-- End credits -->
 			
 <!-- Back indent all elements to avoid unnecessary whitespace in the code display -->
-<!-- @import "style-guide/kit-snippets/colours" -->
+<!-- @import "kit-snippets/colours" -->
 
-<!-- @import "style-guide/kit-snippets/headings" -->
+<!-- @import "kit-snippets/text-blocks" -->
 
-<!-- @import "style-guide/kit-snippets/text-blocks" -->
+<!-- @import "kit-snippets/lists" -->
 
-<!-- @import "style-guide/kit-snippets/lists" -->
+<!-- @import "kit-snippets/text-inline" -->
 
-<!-- @import "style-guide/kit-snippets/text-inline" -->
+<!-- @import "kit-snippets/tables" -->
+
+<!-- @import "kit-snippets/images" -->
+
+<!-- @import "kit-snippets/forms" -->
+
+<!-- @import "kit-snippets/placement-styles" -->
+
+<!-- @import "kit-snippets/misc-checklist" -->
         	
+			</div>
+			<!-- End #style-guide -->
+		
 		</div>
-		<!-- End #style-guide -->
+		<!-- End #container -->
 
-        <!-- Begin JS calls -->
-        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.min.js"><\/script>')</script -->
-        <script src="/js/lib/jquery-1.11.0.min.js"></script>
-        <!-- script src="libs/jquery/jquery.js"></script -->
-		<script src="style-guide/src/sg.js"></script>
-		<script src="style-guide/src/X-rayHTML.js"></script>
+    <!-- Begin JS calls -->
+    <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.min.js"><\/script>')</script -->
+    <script src="libs/jquery/jquery.js"></script>
+    <!-- script src="libs/jquery/jquery.js"></script -->
+		<script src="libs/sg.js"></script>
+		<script src="libs/x-ray-html/X-rayHTML-config.js"></script>
 	
 		<!-- Demo Extras! -->
-		<script src="style-guide/libs/prism.min.js"></script>
-		<script src="style-guide/libs/ZeroClipboard.min.js"></script>
+		<script src="libs/prism/prism.min.js"></script>
+		<script src="libs/prism/ZeroClipboard.min.js"></script>
 	
 		<script>
 			$( window ).bind( "create.xrayhtml", function( e ) {
@@ -106,7 +120,7 @@
 							}),
 							code = $( this ).find( "code" ).text(),
 							clip = new ZeroClipboard( copy, { 
-								moviePath: "/style-guide/libs/ZeroClipboard.swf",
+								moviePath: "libs/prism/ZeroClipboard.swf",
 								text: code
 							});
 	

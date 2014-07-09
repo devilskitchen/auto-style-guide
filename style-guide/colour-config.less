@@ -1,14 +1,21 @@
+// SANDBOX VERSION
+// If you using v4 (early July 2014), use these imports
 // Import the colours LESS file: WATCH OUT FOR VARIABLE CLASHES!
-@import "../less/02-global-variables/02-02-colours";
+@import "../less/01-site-setup/01-01-site-settings";
+@import "../less/03-site-design/01-global/01-02-colours";
+@import "../less/03-site-design/01-global/01-01-units";
+
+// If you using v2 (CMS v4.6.2) or 3 (v5.0.0 until July 2014), use these imports (you may need more)
+//@import "../less/02-site-variables/02-01-colours";
+
 
 // Variables
-@swatch-size:64px;
+@swatch-size:32px;
+@swatch-large-size:64px;
 
 @color1-value:red(@color1);
 
 // Unfortunately, you have to set these up. Bit manual -- sorry!
-
-
 
 // span
 .color-swatches {
@@ -22,53 +29,33 @@
 		span {
 			&:nth-child(1) {
 				background:@color1;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(2) {
 				background:@color2;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
-			/*&:nth-child(3) {
+			&:nth-child(3) {
 				background:@color3;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
-			}*/
-			/*&:nth-child(4) {
+			}
+			&:nth-child(4) {
 				background:@color4;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
-			}*/
+			}
 			/*&:nth-child(5) {
 				background:@color5;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 			/*&:nth-child(6) {
 				background:@color6;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 			/*&:nth-child(7) {
 				background:@color7;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 			/*&:nth-child(8) {
 				background:@color8;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 			/*&:nth-child(9) {
 				background:@color9;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 			/*&:nth-child(10) {
 				background:@color10;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 		}
 	}
@@ -76,38 +63,24 @@
 		span {
 			&:nth-child(1) {
 				background:@lightest-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(2) {
 				background:@lighter-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(3) {
 				background:@light-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(4) {
 				background:@grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(5) {
 				background:@dark-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(6) {
 				background:@darker-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			&:nth-child(7) {
 				background:@darkest-grey;
-				border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}
 			/*&:nth-child(8) {
 				background:@grey8;
@@ -135,12 +108,22 @@
 
 .brand1-function {
 	@swatch-col:@color1;
-	.col-function-swatches(10);
+	.col-function-swatches(20);
 }
 
 .brand2-function {
 	@swatch-col:@color2;
-	.col-function-swatches(10);
+	.col-function-swatches(20);
+}
+
+.brand3-function {
+	@swatch-col:@color3;
+	.col-function-swatches(20);
+}
+
+.brand4-function {
+	@swatch-col:@color4;
+	.col-function-swatches(20);
 }
 
 // Brand swatches
@@ -156,19 +139,49 @@
 }*/
 // End the color loop
 
-
+.color-swatches {
+	margin-top:(@space-em * 2);
+	span {
+		border:2px solid white;
+		text-align:center;
+		box-shadow:0 0 3px rgba(0,0,0,0.7);
+		margin-bottom:(@space-em * 5);
+		&:before {
+			position:relative;
+			top:@swatch-size;
+			font-size:11px;
+			font-weight:bold;
+			color:@text-col;
+		}
+	}
+	&.brand {
+		counter-reset:color-index;
+		span {
+			height:@swatch-large-size;
+			width:@swatch-large-size;
+			counter-increment:color-index;
+			margin-right:(@space-em * 3);
+			&:before {
+				top:@swatch-large-size;
+				content:"@color"counter(color-index);
+			}
+		}
+	}
+}
 
 // Use a looping mixin to give increments for various colour functions
-@color-function-increment:10%;
+@color-function-increment:5%;
 
 // Lighten loop
 .col-function-swatches(@n, @i:1) when (@i =< @n) {
+	@step-label: (@i * @color-function-increment);
 	&.brand-ltn {
 		span {
 			&:nth-child(@{i}) {
 	        	background:lighten(@swatch-col,(@i * @color-function-increment));
-	        	border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
+				&:before {
+			        content:"@{step-label}";
+		        }
 	        }
 		}
 	}
@@ -176,8 +189,9 @@
 		span {
 			&:nth-child(@{i}) {
 	        	background:darken(@swatch-col,(@i * @color-function-increment));
-	        	border:2px solid white;
-				box-shadow:0 0 3px rgba(0,0,0,0.7);
+				&:before {
+			        content:"@{step-label}";
+		        }
 	        }
 		}
 	}

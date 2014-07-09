@@ -1,23 +1,19 @@
-Auto Style Guide
-================
+AUTOMATIC STYLES GUIDE
+======================
 
-A Style Guide with a lot of automatic build features.
+A Style Guide that outputs most standard HTML elements, with the styles from your website.
 
 ## Dependencies
 
 CodeKit 1 or CodeKit 2 (this project uses the .kit methods).
 
-The styles are written in LESS: if you want to SASS-port it, do. And give me some advice!
+The styles are written in LESS.
 
-Due to the fact that I am a front-end dev, this project has no server-side language dependencies at all. I figured that other people might be looking for this sort of thing...
+This project is written in HTML, LESS, and Javascript: it has no server-side language dependencies.
 
 ## Install
 
-Put these files in the root of your project:
-
-    /style-guide.kit
-    /style-guide.html
-    /style-guide/
+Put the ```style-guide``` folder in the ```base-install``` folder of your project.
     
 ### Set up
 
@@ -31,7 +27,7 @@ When you have put the files and folder in the right place, open the ```style-gui
 <!-- $projectDescription = [Description of Project X] -->
 
 <!-- KIT VARIABLE == ENTER THE PATH TO YOUR PROJECT'S CSS FILE -->
-<!-- $projectCSSPath = /css/style.css -->
+<!-- $projectCSSPath = ../css/styles.css -->
 
 <!-- KIT VARIABLE == ENTER A "HOW TO USE" HERE -->
 <!-- $sgHowTo = This style guide shows how each of the elements within your website works. Click on "View Source" and you can then find the HTML that will generate the look and feel that you want. -->
@@ -40,11 +36,11 @@ When you have put the files and folder in the right place, open the ```style-gui
 
 ### Colour config
 
-This is a little trickier, since there are a lot of variables. Set up is mainly done in ```style-guide/colour-config.less```
+This is a little trickier, since there are a lot of variables (although more automation might be introduced later). Set up is mainly done in ```style-guide/colour-config.less```
 
 This file tells the Style Guide where to find your colours file (check the path).
 
-You may also need to alter ```style-guide/kit-snippets/colours.kit``` depending on how many brand colours you have. Currently, the project is set up to accept two brand colours, but templates for extending this are covered.
+You may also need to modify ```style-guide/kit-snippets/colours.kit``` depending on how many brand colours you have. Currently, the project is set up to accept three brand colours, but templates for extending this are covered.
 
 ### Top Menu
 
@@ -56,9 +52,11 @@ Wrap your elements in this:
 
 Wrap snippets in ```<div data-xrayhtml="flip" class="prism zeroclip"><p>Code here</p></div>```
 
-## This ain't done yet
+### Adding more HTML elements
 
-There's more to come: I suggest that you clone the project, and then you'll know when it has been updated.
+Create a new ```.kit``` file in ```style-guide/kit-snippets```, and write your HTML into it.
+
+Then open ```index.kit```, and scroll to where the snippets are called (around ```line 70```). Then call your new file: ```<!-- @import "kit-snippets/[your-file-name]" -->``` (you do not need to include the ```.kit``` extension in your call).
 
 ## Credits (so far)
 
@@ -70,7 +68,7 @@ The smooth scroll uses [a snippet from CSS Tricks](http://css-tricks.com/snippet
 
 The project uses [Bryan Jones's most excellent CodeKit](http://incident57.com/codekit/index.html) [.kit language](http://incident57.com/codekit/help.html#kit) to provide ```variables``` and ```includes```, and for compiling the [LESS](http://lesscss.org).
 
-<strong>LESS and CodeKit 2 are the best things to happen to front-end development since CSS. Fact.</strong></p>
+*LESS and CodeKit 2 are the best things to happen to front-end development since CSS. Fact.*
 
 
 
