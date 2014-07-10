@@ -1,19 +1,35 @@
 // SANDBOX VERSION
 // If you using v4 (early July 2014), use these imports
 // Import the colours LESS file: WATCH OUT FOR VARIABLE CLASHES!
-@import "../less/01-site-setup/01-01-site-settings";
-@import "../less/03-site-design/01-global/01-02-colours";
-@import "../less/03-site-design/01-global/01-01-units";
+//@import "../less/01-site-setup/01-01-site-settings";
+//@import "../less/03-site-design/01-global/01-02-colours";
+//@import "../less/03-site-design/01-global/01-01-units";
 
 // If you using v2 (CMS v4.6.2) or 3 (v5.0.0 until July 2014), use these imports (you may need more)
 //@import "../less/02-site-variables/02-01-colours";
 
 
-// Variables
+// Size variables
 @swatch-size:32px;
 @swatch-large-size:64px;
+@space-em:0.4em;
+@space-px:4px;
 
-@color1-value:red(@color1);
+// Swatch colours added to maintain the integrity of the files: simply insert your own colour references, "@color1" instead of "red".
+@swatch-color1:red;
+@swatch-color2:blue;
+@swatch-color3:yellow;
+@swatch-color4:green;
+
+// Swatch colours added to maintain the integrity of the files: simply insert your own colour references, "@lightest-grey" instead of "@swatch-grey1".
+
+//@color1-value:red(@color1);
+@swatch-grey1:#333;
+
+// Text: you should use both light-text and dark-text
+@sg-text-light:#DDD;
+@sg-text-dark:#444;
+
 
 // Unfortunately, you have to set these up. Bit manual -- sorry!
 
@@ -28,59 +44,59 @@
 	&.brand {
 		span {
 			&:nth-child(1) {
-				background:@color1;
+				background:@swatch-color1;
 			}
 			&:nth-child(2) {
-				background:@color2;
+				background:@swatch-color2;
 			}
 			&:nth-child(3) {
-				background:@color3;
+				background:@swatch-color3;
 			}
 			&:nth-child(4) {
-				background:@color4;
+				background:@swatch-color4;
 			}
 			/*&:nth-child(5) {
-				background:@color5;
+				background:@swatch-color5;
 			}*/
 			/*&:nth-child(6) {
-				background:@color6;
+				background:@swatch-color6;
 			}*/
 			/*&:nth-child(7) {
-				background:@color7;
+				background:@swatch-color7;
 			}*/
 			/*&:nth-child(8) {
-				background:@color8;
+				background:@swatch-color8;
 			}*/
 			/*&:nth-child(9) {
-				background:@color9;
+				background:@swatch-color9;
 			}*/
 			/*&:nth-child(10) {
-				background:@color10;
+				background:@swatch-color10;
 			}*/
 		}
 	}
 	&.grey {
 		span {
 			&:nth-child(1) {
-				background:@lightest-grey;
+				//background:@lightest-grey;
 			}
 			&:nth-child(2) {
-				background:@lighter-grey;
+				//background:@lighter-grey;
 			}
 			&:nth-child(3) {
-				background:@light-grey;
+				//background:@light-grey;
 			}
 			&:nth-child(4) {
-				background:@grey;
+				//background:@grey;
 			}
 			&:nth-child(5) {
-				background:@dark-grey;
+				//background:@dark-grey;
 			}
 			&:nth-child(6) {
-				background:@darker-grey;
+				//background:@darker-grey;
 			}
 			&:nth-child(7) {
-				background:@darkest-grey;
+				//background:@darkest-grey;
 			}
 			/*&:nth-child(8) {
 				background:@grey8;
@@ -107,22 +123,27 @@
 }
 
 .brand1-function {
-	@swatch-col:@color1;
+	@swatch-col:@swatch-color1;
 	.col-function-swatches(20);
 }
 
 .brand2-function {
-	@swatch-col:@color2;
+	@swatch-col:@swatch-color2;
 	.col-function-swatches(20);
 }
 
 .brand3-function {
-	@swatch-col:@color3;
+	@swatch-col:@swatch-color3;
 	.col-function-swatches(20);
 }
 
 .brand4-function {
-	@swatch-col:@color4;
+	@swatch-col:@swatch-color4;
+	.col-function-swatches(20);
+}
+
+.greys-function {
+	@swatch-col:@swatch-grey1;
 	.col-function-swatches(20);
 }
 
@@ -151,7 +172,7 @@
 			top:@swatch-size;
 			font-size:11px;
 			font-weight:bold;
-			color:@text-col;
+			color:@sg-text-dark;
 		}
 	}
 	&.brand {
@@ -198,7 +219,3 @@
 	.col-function-swatches(@n,(@i+1));
 }
 // End the color loop
-
-
-
-

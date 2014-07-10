@@ -1,17 +1,6 @@
 @charset "UTF-8";
 /*==== Styles for the presentation of the Style Guide ====*/
 /*==== Import Colour config ====*/
-/*==== SET MAIN VARIABLES TO CONTROL PAGE STRUCTURE ====*/
-/*==== SET MAIN DESIGN VARIABLES ====*/
-/*-- Advanced Settings --*/
-/*==== COLOURS (or colors) ====*/
-/*==== SPACING ELEMENTS ====*/
-/*==== FONT UNITS ====*/
-/*==== HIDE ELEMENTS USING POSITION (FOR TRANSITIONS) ====*/
-/*==== SET THE OVERALL FONT SIZE ====*/
-html {
-  font-size: 67.5%;
-}
 .color-swatches span {
   display: inline-block;
   width: 32px;
@@ -20,35 +9,35 @@ html {
 }
 .color-swatches.brand span {
   /*&:nth-child(5) {
-				background:@color5;
+				background:@swatch-color5;
 			}*/
   /*&:nth-child(6) {
-				background:@color6;
+				background:@swatch-color6;
 			}*/
   /*&:nth-child(7) {
-				background:@color7;
+				background:@swatch-color7;
 			}*/
   /*&:nth-child(8) {
-				background:@color8;
+				background:@swatch-color8;
 			}*/
   /*&:nth-child(9) {
-				background:@color9;
+				background:@swatch-color9;
 			}*/
   /*&:nth-child(10) {
-				background:@color10;
+				background:@swatch-color10;
 			}*/
 }
 .color-swatches.brand span:nth-child(1) {
-  background: #0f7bbd;
+  background: #ff0000;
 }
 .color-swatches.brand span:nth-child(2) {
-  background: #db7b2a;
+  background: #0000ff;
 }
 .color-swatches.brand span:nth-child(3) {
-  background: #378d2b;
+  background: #ffff00;
 }
 .color-swatches.brand span:nth-child(4) {
-  background: #af0811;
+  background: #008000;
 }
 .color-swatches.grey span {
   /*&:nth-child(8) {
@@ -67,137 +56,116 @@ html {
 				box-shadow:0 0 3px rgba(0,0,0,0.7);
 			}*/
 }
-.color-swatches.grey span:nth-child(1) {
-  background: #eeeeee;
-}
-.color-swatches.grey span:nth-child(2) {
-  background: #dddddd;
-}
-.color-swatches.grey span:nth-child(3) {
-  background: #cccccc;
-}
-.color-swatches.grey span:nth-child(4) {
-  background: #999999;
-}
-.color-swatches.grey span:nth-child(5) {
-  background: #666666;
-}
-.color-swatches.grey span:nth-child(6) {
-  background: #444444;
-}
-.color-swatches.grey span:nth-child(7) {
-  background: #222222;
-}
 .brand1-function.brand-ltn span:nth-child( 1) {
-  background: #118ad5;
+  background: #ff1a1a;
 }
 .brand1-function.brand-ltn span:nth-child( 1):before {
   content: "5%";
 }
 .brand1-function.brand-dkn span:nth-child( 1) {
-  background: #0d6ca5;
+  background: #e60000;
 }
 .brand1-function.brand-dkn span:nth-child( 1):before {
   content: "5%";
 }
 .brand1-function.brand-ltn span:nth-child( 2) {
-  background: #139aec;
+  background: #ff3333;
 }
 .brand1-function.brand-ltn span:nth-child( 2):before {
   content: "10%";
 }
 .brand1-function.brand-dkn span:nth-child( 2) {
-  background: #0b5c8e;
+  background: #cc0000;
 }
 .brand1-function.brand-dkn span:nth-child( 2):before {
   content: "10%";
 }
 .brand1-function.brand-ltn span:nth-child( 3) {
-  background: #2aa4ee;
+  background: #ff4d4d;
 }
 .brand1-function.brand-ltn span:nth-child( 3):before {
   content: "15%";
 }
 .brand1-function.brand-dkn span:nth-child( 3) {
-  background: #094d76;
+  background: #b30000;
 }
 .brand1-function.brand-dkn span:nth-child( 3):before {
   content: "15%";
 }
 .brand1-function.brand-ltn span:nth-child( 4) {
-  background: #42aef0;
+  background: #ff6666;
 }
 .brand1-function.brand-ltn span:nth-child( 4):before {
   content: "20%";
 }
 .brand1-function.brand-dkn span:nth-child( 4) {
-  background: #083d5f;
+  background: #990000;
 }
 .brand1-function.brand-dkn span:nth-child( 4):before {
   content: "20%";
 }
 .brand1-function.brand-ltn span:nth-child( 5) {
-  background: #5ab8f2;
+  background: #ff8080;
 }
 .brand1-function.brand-ltn span:nth-child( 5):before {
   content: "25%";
 }
 .brand1-function.brand-dkn span:nth-child( 5) {
-  background: #062e47;
+  background: #800000;
 }
 .brand1-function.brand-dkn span:nth-child( 5):before {
   content: "25%";
 }
 .brand1-function.brand-ltn span:nth-child( 6) {
-  background: #71c2f4;
+  background: #ff9999;
 }
 .brand1-function.brand-ltn span:nth-child( 6):before {
   content: "30%";
 }
 .brand1-function.brand-dkn span:nth-child( 6) {
-  background: #041f2f;
+  background: #660000;
 }
 .brand1-function.brand-dkn span:nth-child( 6):before {
   content: "30%";
 }
 .brand1-function.brand-ltn span:nth-child( 7) {
-  background: #89ccf6;
+  background: #ffb3b3;
 }
 .brand1-function.brand-ltn span:nth-child( 7):before {
   content: "35%";
 }
 .brand1-function.brand-dkn span:nth-child( 7) {
-  background: #020f18;
+  background: #4d0000;
 }
 .brand1-function.brand-dkn span:nth-child( 7):before {
   content: "35%";
 }
 .brand1-function.brand-ltn span:nth-child( 8) {
-  background: #a1d6f7;
+  background: #ffcccc;
 }
 .brand1-function.brand-ltn span:nth-child( 8):before {
   content: "40%";
 }
 .brand1-function.brand-dkn span:nth-child( 8) {
-  background: #000000;
+  background: #330000;
 }
 .brand1-function.brand-dkn span:nth-child( 8):before {
   content: "40%";
 }
 .brand1-function.brand-ltn span:nth-child( 9) {
-  background: #b8e1f9;
+  background: #ffe5e5;
 }
 .brand1-function.brand-ltn span:nth-child( 9):before {
   content: "45%";
 }
 .brand1-function.brand-dkn span:nth-child( 9) {
-  background: #000000;
+  background: #190000;
 }
 .brand1-function.brand-dkn span:nth-child( 9):before {
   content: "45%";
 }
 .brand1-function.brand-ltn span:nth-child( 10) {
-  background: #d0ebfb;
+  background: #ffffff;
 }
 .brand1-function.brand-ltn span:nth-child( 10):before {
   content: "50%";
@@ -209,7 +177,7 @@ html {
   content: "50%";
 }
 .brand1-function.brand-ltn span:nth-child( 11) {
-  background: #e7f5fd;
+  background: #ffffff;
 }
 .brand1-function.brand-ltn span:nth-child( 11):before {
   content: "55%";
@@ -329,109 +297,109 @@ html {
   content: "100%";
 }
 .brand2-function.brand-ltn span:nth-child( 1) {
-  background: #df8940;
+  background: #1a1aff;
 }
 .brand2-function.brand-ltn span:nth-child( 1):before {
   content: "5%";
 }
 .brand2-function.brand-dkn span:nth-child( 1) {
-  background: #c96f22;
+  background: #0000e6;
 }
 .brand2-function.brand-dkn span:nth-child( 1):before {
   content: "5%";
 }
 .brand2-function.brand-ltn span:nth-child( 2) {
-  background: #e29656;
+  background: #3333ff;
 }
 .brand2-function.brand-ltn span:nth-child( 2):before {
   content: "10%";
 }
 .brand2-function.brand-dkn span:nth-child( 2) {
-  background: #b4631e;
+  background: #0000cc;
 }
 .brand2-function.brand-dkn span:nth-child( 2):before {
   content: "10%";
 }
 .brand2-function.brand-ltn span:nth-child( 3) {
-  background: #e6a46b;
+  background: #4d4dff;
 }
 .brand2-function.brand-ltn span:nth-child( 3):before {
   content: "15%";
 }
 .brand2-function.brand-dkn span:nth-child( 3) {
-  background: #9e571b;
+  background: #0000b3;
 }
 .brand2-function.brand-dkn span:nth-child( 3):before {
   content: "15%";
 }
 .brand2-function.brand-ltn span:nth-child( 4) {
-  background: #eab181;
+  background: #6666ff;
 }
 .brand2-function.brand-ltn span:nth-child( 4):before {
   content: "20%";
 }
 .brand2-function.brand-dkn span:nth-child( 4) {
-  background: #884b17;
+  background: #000099;
 }
 .brand2-function.brand-dkn span:nth-child( 4):before {
   content: "20%";
 }
 .brand2-function.brand-ltn span:nth-child( 5) {
-  background: #edbf97;
+  background: #8080ff;
 }
 .brand2-function.brand-ltn span:nth-child( 5):before {
   content: "25%";
 }
 .brand2-function.brand-dkn span:nth-child( 5) {
-  background: #723f13;
+  background: #000080;
 }
 .brand2-function.brand-dkn span:nth-child( 5):before {
   content: "25%";
 }
 .brand2-function.brand-ltn span:nth-child( 6) {
-  background: #f1ccad;
+  background: #9999ff;
 }
 .brand2-function.brand-ltn span:nth-child( 6):before {
   content: "30%";
 }
 .brand2-function.brand-dkn span:nth-child( 6) {
-  background: #5c3310;
+  background: #000066;
 }
 .brand2-function.brand-dkn span:nth-child( 6):before {
   content: "30%";
 }
 .brand2-function.brand-ltn span:nth-child( 7) {
-  background: #f5dac3;
+  background: #b3b3ff;
 }
 .brand2-function.brand-ltn span:nth-child( 7):before {
   content: "35%";
 }
 .brand2-function.brand-dkn span:nth-child( 7) {
-  background: #47270c;
+  background: #00004d;
 }
 .brand2-function.brand-dkn span:nth-child( 7):before {
   content: "35%";
 }
 .brand2-function.brand-ltn span:nth-child( 8) {
-  background: #f8e7d9;
+  background: #ccccff;
 }
 .brand2-function.brand-ltn span:nth-child( 8):before {
   content: "40%";
 }
 .brand2-function.brand-dkn span:nth-child( 8) {
-  background: #311b08;
+  background: #000033;
 }
 .brand2-function.brand-dkn span:nth-child( 8):before {
   content: "40%";
 }
 .brand2-function.brand-ltn span:nth-child( 9) {
-  background: #fcf5ee;
+  background: #e5e5ff;
 }
 .brand2-function.brand-ltn span:nth-child( 9):before {
   content: "45%";
 }
 .brand2-function.brand-dkn span:nth-child( 9) {
-  background: #1b0f05;
+  background: #000019;
 }
 .brand2-function.brand-dkn span:nth-child( 9):before {
   content: "45%";
@@ -443,7 +411,7 @@ html {
   content: "50%";
 }
 .brand2-function.brand-dkn span:nth-child( 10) {
-  background: #050301;
+  background: #000000;
 }
 .brand2-function.brand-dkn span:nth-child( 10):before {
   content: "50%";
@@ -569,115 +537,115 @@ html {
   content: "100%";
 }
 .brand3-function.brand-ltn span:nth-child( 1) {
-  background: #3fa131;
+  background: #ffff1a;
 }
 .brand3-function.brand-ltn span:nth-child( 1):before {
   content: "5%";
 }
 .brand3-function.brand-dkn span:nth-child( 1) {
-  background: #2f7925;
+  background: #e5e600;
 }
 .brand3-function.brand-dkn span:nth-child( 1):before {
   content: "5%";
 }
 .brand3-function.brand-ltn span:nth-child( 2) {
-  background: #46b437;
+  background: #ffff33;
 }
 .brand3-function.brand-ltn span:nth-child( 2):before {
   content: "10%";
 }
 .brand3-function.brand-dkn span:nth-child( 2) {
-  background: #28661f;
+  background: #cccc00;
 }
 .brand3-function.brand-dkn span:nth-child( 2):before {
   content: "10%";
 }
 .brand3-function.brand-ltn span:nth-child( 3) {
-  background: #50c540;
+  background: #ffff4d;
 }
 .brand3-function.brand-ltn span:nth-child( 3):before {
   content: "15%";
 }
 .brand3-function.brand-dkn span:nth-child( 3) {
-  background: #205219;
+  background: #b2b300;
 }
 .brand3-function.brand-dkn span:nth-child( 3):before {
   content: "15%";
 }
 .brand3-function.brand-ltn span:nth-child( 4) {
-  background: #62cb53;
+  background: #ffff66;
 }
 .brand3-function.brand-ltn span:nth-child( 4):before {
   content: "20%";
 }
 .brand3-function.brand-dkn span:nth-child( 4) {
-  background: #193f13;
+  background: #999900;
 }
 .brand3-function.brand-dkn span:nth-child( 4):before {
   content: "20%";
 }
 .brand3-function.brand-ltn span:nth-child( 5) {
-  background: #74d167;
+  background: #ffff80;
 }
 .brand3-function.brand-ltn span:nth-child( 5):before {
   content: "25%";
 }
 .brand3-function.brand-dkn span:nth-child( 5) {
-  background: #112b0d;
+  background: #7f8000;
 }
 .brand3-function.brand-dkn span:nth-child( 5):before {
   content: "25%";
 }
 .brand3-function.brand-ltn span:nth-child( 6) {
-  background: #86d77a;
+  background: #ffff99;
 }
 .brand3-function.brand-ltn span:nth-child( 6):before {
   content: "30%";
 }
 .brand3-function.brand-dkn span:nth-child( 6) {
-  background: #091807;
+  background: #666600;
 }
 .brand3-function.brand-dkn span:nth-child( 6):before {
   content: "30%";
 }
 .brand3-function.brand-ltn span:nth-child( 7) {
-  background: #98dd8e;
+  background: #ffffb3;
 }
 .brand3-function.brand-ltn span:nth-child( 7):before {
   content: "35%";
 }
 .brand3-function.brand-dkn span:nth-child( 7) {
-  background: #020401;
+  background: #4d4d00;
 }
 .brand3-function.brand-dkn span:nth-child( 7):before {
   content: "35%";
 }
 .brand3-function.brand-ltn span:nth-child( 8) {
-  background: #a9e2a2;
+  background: #ffffcc;
 }
 .brand3-function.brand-ltn span:nth-child( 8):before {
   content: "40%";
 }
 .brand3-function.brand-dkn span:nth-child( 8) {
-  background: #000000;
+  background: #333300;
 }
 .brand3-function.brand-dkn span:nth-child( 8):before {
   content: "40%";
 }
 .brand3-function.brand-ltn span:nth-child( 9) {
-  background: #bbe8b5;
+  background: #ffffe5;
 }
 .brand3-function.brand-ltn span:nth-child( 9):before {
   content: "45%";
 }
 .brand3-function.brand-dkn span:nth-child( 9) {
-  background: #000000;
+  background: #191900;
 }
 .brand3-function.brand-dkn span:nth-child( 9):before {
   content: "45%";
 }
 .brand3-function.brand-ltn span:nth-child( 10) {
-  background: #cdeec9;
+  background: #ffffff;
 }
 .brand3-function.brand-ltn span:nth-child( 10):before {
   content: "50%";
@@ -689,7 +657,7 @@ html {
   content: "50%";
 }
 .brand3-function.brand-ltn span:nth-child( 11) {
-  background: #dff4dc;
+  background: #ffffff;
 }
 .brand3-function.brand-ltn span:nth-child( 11):before {
   content: "55%";
@@ -701,7 +669,7 @@ html {
   content: "55%";
 }
 .brand3-function.brand-ltn span:nth-child( 12) {
-  background: #f1faf0;
+  background: #ffffff;
 }
 .brand3-function.brand-ltn span:nth-child( 12):before {
   content: "60%";
@@ -809,91 +777,91 @@ html {
   content: "100%";
 }
 .brand4-function.brand-ltn span:nth-child( 1) {
-  background: #c70913;
+  background: #009a00;
 }
 .brand4-function.brand-ltn span:nth-child( 1):before {
   content: "5%";
 }
 .brand4-function.brand-dkn span:nth-child( 1) {
-  background: #97070f;
+  background: #006700;
 }
 .brand4-function.brand-dkn span:nth-child( 1):before {
   content: "5%";
 }
 .brand4-function.brand-ltn span:nth-child( 2) {
-  background: #e00a16;
+  background: #00b300;
 }
 .brand4-function.brand-ltn span:nth-child( 2):before {
   content: "10%";
 }
 .brand4-function.brand-dkn span:nth-child( 2) {
-  background: #7e060c;
+  background: #004d00;
 }
 .brand4-function.brand-dkn span:nth-child( 2):before {
   content: "10%";
 }
 .brand4-function.brand-ltn span:nth-child( 3) {
-  background: #f40f1c;
+  background: #00cd00;
 }
 .brand4-function.brand-ltn span:nth-child( 3):before {
   content: "15%";
 }
 .brand4-function.brand-dkn span:nth-child( 3) {
-  background: #66050a;
+  background: #003400;
 }
 .brand4-function.brand-dkn span:nth-child( 3):before {
   content: "15%";
 }
 .brand4-function.brand-ltn span:nth-child( 4) {
-  background: #f52833;
+  background: #00e600;
 }
 .brand4-function.brand-ltn span:nth-child( 4):before {
   content: "20%";
 }
 .brand4-function.brand-dkn span:nth-child( 4) {
-  background: #4d0408;
+  background: #001a00;
 }
 .brand4-function.brand-dkn span:nth-child( 4):before {
   content: "20%";
 }
 .brand4-function.brand-ltn span:nth-child( 5) {
-  background: #f6404a;
+  background: #00ff00;
 }
 .brand4-function.brand-ltn span:nth-child( 5):before {
   content: "25%";
 }
 .brand4-function.brand-dkn span:nth-child( 5) {
-  background: #350205;
+  background: #000000;
 }
 .brand4-function.brand-dkn span:nth-child( 5):before {
   content: "25%";
 }
 .brand4-function.brand-ltn span:nth-child( 6) {
-  background: #f75961;
+  background: #1aff1a;
 }
 .brand4-function.brand-ltn span:nth-child( 6):before {
   content: "30%";
 }
 .brand4-function.brand-dkn span:nth-child( 6) {
-  background: #1d0103;
+  background: #000000;
 }
 .brand4-function.brand-dkn span:nth-child( 6):before {
   content: "30%";
 }
 .brand4-function.brand-ltn span:nth-child( 7) {
-  background: #f97178;
+  background: #33ff33;
 }
 .brand4-function.brand-ltn span:nth-child( 7):before {
   content: "35%";
 }
 .brand4-function.brand-dkn span:nth-child( 7) {
-  background: #040000;
+  background: #000000;
 }
 .brand4-function.brand-dkn span:nth-child( 7):before {
   content: "35%";
 }
 .brand4-function.brand-ltn span:nth-child( 8) {
-  background: #fa898f;
+  background: #4dff4d;
 }
 .brand4-function.brand-ltn span:nth-child( 8):before {
   content: "40%";
@@ -905,7 +873,7 @@ html {
   content: "40%";
 }
 .brand4-function.brand-ltn span:nth-child( 9) {
-  background: #fba2a7;
+  background: #66ff66;
 }
 .brand4-function.brand-ltn span:nth-child( 9):before {
   content: "45%";
@@ -917,7 +885,7 @@ html {
   content: "45%";
 }
 .brand4-function.brand-ltn span:nth-child( 10) {
-  background: #fcbabe;
+  background: #80ff80;
 }
 .brand4-function.brand-ltn span:nth-child( 10):before {
   content: "50%";
@@ -929,7 +897,7 @@ html {
   content: "50%";
 }
 .brand4-function.brand-ltn span:nth-child( 11) {
-  background: #fdd3d5;
+  background: #9aff9a;
 }
 .brand4-function.brand-ltn span:nth-child( 11):before {
   content: "55%";
@@ -941,7 +909,7 @@ html {
   content: "55%";
 }
 .brand4-function.brand-ltn span:nth-child( 12) {
-  background: #feebec;
+  background: #b3ffb3;
 }
 .brand4-function.brand-ltn span:nth-child( 12):before {
   content: "60%";
@@ -953,7 +921,7 @@ html {
   content: "60%";
 }
 .brand4-function.brand-ltn span:nth-child( 13) {
-  background: #ffffff;
+  background: #cdffcd;
 }
 .brand4-function.brand-ltn span:nth-child( 13):before {
   content: "65%";
@@ -965,7 +933,7 @@ html {
   content: "65%";
 }
 .brand4-function.brand-ltn span:nth-child( 14) {
-  background: #ffffff;
+  background: #e6ffe6;
 }
 .brand4-function.brand-ltn span:nth-child( 14):before {
   content: "70%";
@@ -1046,6 +1014,246 @@ html {
   background: #000000;
 }
 .brand4-function.brand-dkn span:nth-child( 20):before {
+  content: "100%";
+}
+.greys-function.brand-ltn span:nth-child( 1) {
+  background: #404040;
+}
+.greys-function.brand-ltn span:nth-child( 1):before {
+  content: "5%";
+}
+.greys-function.brand-dkn span:nth-child( 1) {
+  background: #262626;
+}
+.greys-function.brand-dkn span:nth-child( 1):before {
+  content: "5%";
+}
+.greys-function.brand-ltn span:nth-child( 2) {
+  background: #4d4d4d;
+}
+.greys-function.brand-ltn span:nth-child( 2):before {
+  content: "10%";
+}
+.greys-function.brand-dkn span:nth-child( 2) {
+  background: #1a1a1a;
+}
+.greys-function.brand-dkn span:nth-child( 2):before {
+  content: "10%";
+}
+.greys-function.brand-ltn span:nth-child( 3) {
+  background: #595959;
+}
+.greys-function.brand-ltn span:nth-child( 3):before {
+  content: "15%";
+}
+.greys-function.brand-dkn span:nth-child( 3) {
+  background: #0d0d0d;
+}
+.greys-function.brand-dkn span:nth-child( 3):before {
+  content: "15%";
+}
+.greys-function.brand-ltn span:nth-child( 4) {
+  background: #666666;
+}
+.greys-function.brand-ltn span:nth-child( 4):before {
+  content: "20%";
+}
+.greys-function.brand-dkn span:nth-child( 4) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 4):before {
+  content: "20%";
+}
+.greys-function.brand-ltn span:nth-child( 5) {
+  background: #737373;
+}
+.greys-function.brand-ltn span:nth-child( 5):before {
+  content: "25%";
+}
+.greys-function.brand-dkn span:nth-child( 5) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 5):before {
+  content: "25%";
+}
+.greys-function.brand-ltn span:nth-child( 6) {
+  background: #808080;
+}
+.greys-function.brand-ltn span:nth-child( 6):before {
+  content: "30%";
+}
+.greys-function.brand-dkn span:nth-child( 6) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 6):before {
+  content: "30%";
+}
+.greys-function.brand-ltn span:nth-child( 7) {
+  background: #8c8c8c;
+}
+.greys-function.brand-ltn span:nth-child( 7):before {
+  content: "35%";
+}
+.greys-function.brand-dkn span:nth-child( 7) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 7):before {
+  content: "35%";
+}
+.greys-function.brand-ltn span:nth-child( 8) {
+  background: #999999;
+}
+.greys-function.brand-ltn span:nth-child( 8):before {
+  content: "40%";
+}
+.greys-function.brand-dkn span:nth-child( 8) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 8):before {
+  content: "40%";
+}
+.greys-function.brand-ltn span:nth-child( 9) {
+  background: #a6a6a6;
+}
+.greys-function.brand-ltn span:nth-child( 9):before {
+  content: "45%";
+}
+.greys-function.brand-dkn span:nth-child( 9) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 9):before {
+  content: "45%";
+}
+.greys-function.brand-ltn span:nth-child( 10) {
+  background: #b3b3b3;
+}
+.greys-function.brand-ltn span:nth-child( 10):before {
+  content: "50%";
+}
+.greys-function.brand-dkn span:nth-child( 10) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 10):before {
+  content: "50%";
+}
+.greys-function.brand-ltn span:nth-child( 11) {
+  background: #bfbfbf;
+}
+.greys-function.brand-ltn span:nth-child( 11):before {
+  content: "55%";
+}
+.greys-function.brand-dkn span:nth-child( 11) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 11):before {
+  content: "55%";
+}
+.greys-function.brand-ltn span:nth-child( 12) {
+  background: #cccccc;
+}
+.greys-function.brand-ltn span:nth-child( 12):before {
+  content: "60%";
+}
+.greys-function.brand-dkn span:nth-child( 12) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 12):before {
+  content: "60%";
+}
+.greys-function.brand-ltn span:nth-child( 13) {
+  background: #d9d9d9;
+}
+.greys-function.brand-ltn span:nth-child( 13):before {
+  content: "65%";
+}
+.greys-function.brand-dkn span:nth-child( 13) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 13):before {
+  content: "65%";
+}
+.greys-function.brand-ltn span:nth-child( 14) {
+  background: #e5e5e5;
+}
+.greys-function.brand-ltn span:nth-child( 14):before {
+  content: "70%";
+}
+.greys-function.brand-dkn span:nth-child( 14) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 14):before {
+  content: "70%";
+}
+.greys-function.brand-ltn span:nth-child( 15) {
+  background: #f2f2f2;
+}
+.greys-function.brand-ltn span:nth-child( 15):before {
+  content: "75%";
+}
+.greys-function.brand-dkn span:nth-child( 15) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 15):before {
+  content: "75%";
+}
+.greys-function.brand-ltn span:nth-child( 16) {
+  background: #ffffff;
+}
+.greys-function.brand-ltn span:nth-child( 16):before {
+  content: "80%";
+}
+.greys-function.brand-dkn span:nth-child( 16) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 16):before {
+  content: "80%";
+}
+.greys-function.brand-ltn span:nth-child( 17) {
+  background: #ffffff;
+}
+.greys-function.brand-ltn span:nth-child( 17):before {
+  content: "85%";
+}
+.greys-function.brand-dkn span:nth-child( 17) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 17):before {
+  content: "85%";
+}
+.greys-function.brand-ltn span:nth-child( 18) {
+  background: #ffffff;
+}
+.greys-function.brand-ltn span:nth-child( 18):before {
+  content: "90%";
+}
+.greys-function.brand-dkn span:nth-child( 18) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 18):before {
+  content: "90%";
+}
+.greys-function.brand-ltn span:nth-child( 19) {
+  background: #ffffff;
+}
+.greys-function.brand-ltn span:nth-child( 19):before {
+  content: "95%";
+}
+.greys-function.brand-dkn span:nth-child( 19) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 19):before {
+  content: "95%";
+}
+.greys-function.brand-ltn span:nth-child( 20) {
+  background: #ffffff;
+}
+.greys-function.brand-ltn span:nth-child( 20):before {
+  content: "100%";
+}
+.greys-function.brand-dkn span:nth-child( 20) {
+  background: #000000;
+}
+.greys-function.brand-dkn span:nth-child( 20):before {
   content: "100%";
 }
 /*.brand-swatches(@n, @i:1) when (@i =< @n) {
